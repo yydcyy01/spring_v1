@@ -1,0 +1,32 @@
+service 层类前加注释 @Component (value="") , 配置 bean.xml 需要扫描的 reference 包.
+
+注解, 不需要 setter, 那么是如何注入成功的呢?
+
+图 :  Spring 相当于一个 Map, <Key String , Value, Object>
+
+详见 Spring 基于 IOC 注解.md
+
+用于创建对象的
+            @component()
+            @controller()
+            @Service()
+            @Repository()
+
+用于注入数据的
+        (Bean)
+            @Autowired()
+            @Qualifier()
+            @Resource()
+         集合 :
+            只能 xml 文件
+         @Value()
+            注入 基本数据类型 / String
+用于改变作用范围的
+        @Scope()
+和生命周期相关
+        @PreDestroy()
+        @PostConstruct()
+
+
+
+        Demo 详见: com.yydcyy.service.impl.AccountServiceImpl.java

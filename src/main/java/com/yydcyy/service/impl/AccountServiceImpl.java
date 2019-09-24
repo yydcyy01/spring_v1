@@ -3,11 +3,10 @@ package com.yydcyy.service.impl;
 /**
  * @author YYDCYY
  * @create 2019-09-23
+ *  Demo Bean, 取出 dao 层, 直接打印输出测试.   []
  */
 
-import com.yydcyy.dao.IAccountDao;
-import com.yydcyy.dao.impl.AccountDaoImpl;
-import com.yydcyy.factory.BeanFactory;
+
 import com.yydcyy.service.IAccountService;
 
 /**
@@ -17,14 +16,17 @@ public class AccountServiceImpl implements IAccountService {
 
     //private IAccountDao accountDao = new AccountDaoImpl();
 
-    private IAccountDao accountDao = (IAccountDao) BeanFactory.getBean("accountDao");
-
-//    private int i = 1;
+    public AccountServiceImpl() {
+        System.out.println("对象创建了");
+    }
 
     public void  saveAccount(){
-        int i = 1;
-        accountDao.saveAccount();
-        System.out.println(i);
-        i++;
+        System.out.println("service 中的 saveAccount 方法执行了...");
+    }
+    public void  init(){
+        System.out.println("对象初始化了。。。");
+    }
+    public void  destroy(){
+        System.out.println("对象销毁了。。。");
     }
 }

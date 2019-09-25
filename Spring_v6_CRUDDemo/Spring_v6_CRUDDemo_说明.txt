@@ -1,0 +1,2 @@
+bean.xml 配置 改为 @注解配置.
+https://blog.csdn.net/azitl/article/details/101352746 记录过程

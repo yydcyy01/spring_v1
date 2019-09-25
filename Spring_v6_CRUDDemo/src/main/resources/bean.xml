@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:contest="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!-- 告知spring在创建容器时要扫描的包 -->
+    <context:component-scan base-package="com.yydcyy"></context:component-scan>
+
+    <!--配置QueryRunner-->
+    <bean id="runner" class="org.apache.commons.dbutils.QueryRunner" scope="prototype">
+        <!--注入数据源-->
+        <constructor-arg name="ds" ref="dataSource"></constructor-arg>
+    </bean>
+
+    <!-- 配置数据源 -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <!--连接数据库的必备信息-->
+        <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/eesy"></property>
+        <property name="user" value="root"></property>
+        <property name="password" value="123123"></property>
+    </bean>
+    <!-- 配置Service -->
+    <!--<bean id="accountService" class="com.yydcyy.service.impl.AccountServiceImpl">
+        &lt;!&ndash; 注入dao &ndash;&gt;
+        <property name="accountDao" ref="accountDao"></property>
+    </bean>-->
+
+    <!--配置Dao对象  这种配置需要对应set() 方法 -->
+    <!--<bean id="accountDao" class="com.yydcyy.dao.impl.AccountDaoImpl">
+        &lt;!&ndash; 注入QueryRunner &ndash;&gt;
+        <property name="runner" ref="runner"></property>
+    </bean>-->
+</beans>

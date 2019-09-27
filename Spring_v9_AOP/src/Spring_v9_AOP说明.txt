@@ -1,0 +1,19 @@
+SpringAOP Demo
+
+utils.Logger
+com.yydcyy.service.impl
+com.yydcyy.test    三个包下的文件, 是 AOP Demo
+
+然后开始增删改查说明 Demo
+配置 bean.xml
+ 是 JDBCDaoSupport 说明. (用法)
+    先创建的jdbctemplate1 , 2, 3
+jdbcTemplate4 是工作会常用的写法
+
+
+Dao 编写两种方式 :
+1)  AccountDaoImpl  xml 方法 ; 为简写代码(声明, 方法),采用继承JdbcDaoSupport [Spring.jdbc 类], 调用 super.xxxx 执行
+2)  AccountDaoImpl2  基于注解方法; @Repository
+                                 @Autowired  自己写
+
+

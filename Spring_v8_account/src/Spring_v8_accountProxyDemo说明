@@ -1,0 +1,12 @@
+v8accountProxyDemo基于 v6 xml 版本改写, util 等等, 步骤详见 account.md;
+但是结果  出现 nullPointerException.   没找出问题.  (应该是配置文件问题) , xml 哪里少了.  回头再看看
+
+
+
+
+com.yydcyy.proxy 包下, Client 模拟一个消费者, 基于接口的动态代理模式
+com.yydcyy. cglib / proxy 是另一个模拟 Spring 动态代理的小 Demo, 合在这个项目里
+
+
+
+

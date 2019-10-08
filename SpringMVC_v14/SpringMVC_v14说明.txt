@@ -1,0 +1,9 @@
+本章实践 ① 异常处理 ② 拦截器 Interceptor
+
+步骤 : ①  先配环境包括但不止于 : web.xml/ SpringMVC.xml /
+       ② index.jsp -> com.yydcyy.controller.UserController.java 类  注解, 方法...   跳转页面 : success.jsp , error.jsp 等
+       ③ Tomcat 配置
+       ④ exception.SysException / SysExceptionResolver 类实现异常处理.
+          interceptor.MyInterceptor1.java 连接器. 即 springmvc.xml 添加拦截器配置
+
+          具体步骤见: https://blog.csdn.net/azitl/article/details/102397343 博客记录

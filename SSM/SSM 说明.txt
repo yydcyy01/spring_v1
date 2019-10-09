@@ -1,0 +1,2 @@
+SSM 项目是整合 Spring / MyBatis / SpringMVC 的 Demo, 起名应该是 SSM_v15
+记录说明 : https://blog.csdn.net/azitl/article/details/102461713
